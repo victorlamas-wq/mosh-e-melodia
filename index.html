@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosh e Melodia | Blog sobre Rock e Metal</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#111;
+            color:#f2f2f2;
+            line-height:1.8;
+        }
+
+        header{
+            background:#000;
+            padding:40px 20px;
+            text-align:center;
+            border-bottom:4px solid #4f4e4e;
+        }
+
+        header h1{
+            font-size:3rem;
+            color:#525252;
+            margin-bottom:15px;
+        }
+
+        header p{
+            max-width:900px;
+            margin:auto;
+            font-size:18px;
+        }
+
+        main{
+            width:90%;
+            max-width:1100px;
+            margin:40px auto;
+            background:#1b1b1b;
+            padding:40px;
+            border-radius:15px;
+            box-shadow:0 0 20px rgba(0,0,0,.5);
+        }
+
+        section{
+            margin-bottom:45px;
+        }
+
+        h2{
+            color:#646464;
+            margin-bottom:18px;
+            border-left:6px solid #4e4e4e;
+            padding-left:12px;
+        }
+
+        p{
+            text-align:justify;
+            margin-bottom:18px;
+        }
+
+        ul{
+            margin-left:30px;
+            margin-top:10px;
+        }
+
+        li{
+            margin-bottom:8px;
+        }
+
+        footer{
+            background:#000;
+            text-align:center;
+            padding:30px;
+            margin-top:40px;
+            border-top:4px solid #484343;
+        }
+
+        footer p{
+            text-align:center;
+        }
+
+        @media(max-width:768px){
+
+            header h1{
+                font-size:2.2rem;
+            }
+
+            main{
+                width:95%;
+                padding:25px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Mosh e Melodia</h1>
+
+<p>
+Seja muito bem-vindo(a) ao <strong>Mosh e Melodia</strong>, um espaço criado para todos aqueles que apreciam a música, a cultura e a história do Rock e do Metal.
+</p>
+
+</header>
+
+<main>
+
+<section>
+
+<h2>Fundamentos do Mosh e Melodia</h2>
+
+<p>
+O Mosh e Melodia foi criado para compartilhar conhecimentos, curiosidades, histórias e conteúdos completos sobre o Rock e o Heavy Metal, permitindo que iniciantes e fãs experientes encontrem informações organizadas e confiáveis.
+</p>
+
+<ul>
+<li>Informar de maneira clara e confiável sobre Rock e Metal.</li>
+<li>Contar a história dos estilos musicais.</li>
+<li>Explicar os principais subgêneros.</li>
+<li>Apresentar curiosidades e fatos históricos.</li>
+<li>Valorizar músicos e bandas.</li>
+<li>Incentivar novos ouvintes.</li>
+<li>Compartilhar conteúdo educativo.</li>
+</ul>
+
+</section>
+<div class="avaliacao">
+
+    <button class="like" onclick="avaliar('rock', 'like')">
+        👍 Curtir <span id="rock-like">0</span>
+    </button>
+
+    <button class="dislike" onclick="avaliar('rock', 'dislike')">
+        👎 Não curtir <span id="rock-dislike">0</span>
+    </button>
+<script>
+
+function avaliar(artigo, tipo){
+
+    let chave = artigo + "-" + tipo;
+
+    let valor = localStorage.getItem(chave);
+
+    if(valor === null){
+        valor = 0;
+    }
+
+    valor++;
+
+    localStorage.setItem(chave, valor);
+
+    document.getElementById(chave).innerHTML = valor;
+
+}
+
+
+// Carrega as avaliações quando abre a página
+
+window.onload = function(){
+
+    let botoes = document.querySelectorAll(".avaliacao span");
+
+    botoes.forEach(function(item){
+
+        let valor = localStorage.getItem(item.id);
+
+        if(valor !== null){
+            item.innerHTML = valor;
+        }
+
+    });
+
+}
+
+</script>
+
+</div>
+<section>
+
+<h2>A História do Rock</h2>
+
+<p>
+O Rock surgiu durante a década de 1950 nos Estados Unidos a partir da mistura do Blues, Country, Rhythm and Blues e Gospel. Rapidamente tornou-se um dos estilos musicais mais importantes do planeta, influenciando a cultura, a moda e o comportamento de diversas gerações.
+</p>
+
+<p>
+Durante as décadas de 1960 e 1970 surgiram inúmeras bandas que revolucionaram a música e criaram diferentes estilos que continuam influenciando artistas até hoje.
+</p>
+
+</section>
+
+<section>
+
+<h2>O Nascimento do Heavy Metal</h2>
+
+<p>
+No final da década de 1960 surgiu um som mais pesado, intenso e agressivo. Assim nasceu o Heavy Metal, caracterizado por guitarras distorcidas, baterias marcantes, riffs poderosos e solos elaborados.
+</p>
+
+<ul>
+<li>Heavy Metal Tradicional</li>
+<li>Thrash Metal</li>
+<li>Death Metal</li>
+<li>Black Metal</li>
+<li>Power Metal</li>
+<li>Doom Metal</li>
+<li>Progressive Metal</li>
+<li>Symphonic Metal</li>
+<li>Folk Metal</li>
+<li>Metalcore</li>
+<li>Groove Metal</li>
+<li>Nu Metal</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>A Importância do Rock e do Metal</h2>
+
+<p>
+Muito além da música, esses estilos representam liberdade, criatividade, identidade cultural e inovação artística. Grandes festivais, shows históricos e álbuns clássicos consolidaram o Rock e o Metal entre os gêneros mais importantes da história.
+</p>
+
+</section>
+
+<section>
+
+<h2>O que você encontrará neste blog</h2>
+
+<ul>
+<li>História do Rock e do Metal.</li>
+<li>Subgêneros explicados.</li>
+<li>Biografias de bandas.</li>
+<li>Análises de discos.</li>
+<li>Curiosidades.</li>
+<li>Instrumentos musicais.</li>
+<li>Festivais nacionais e internacionais.</li>
+<li>Recomendações de álbuns.</li>
+<li>Notícias do cenário musical.</li>
+<li>Conteúdos educativos.</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>A Evolução do Rock</h2>
+
+<p>
+Cada década trouxe novas bandas, instrumentos, técnicas e sonoridades que transformaram o Rock em um dos estilos mais diversificados da música mundial.
+</p>
+
+</section>
+
+<section>
+
+<h2>As Décadas de Ouro</h2>
+
+<p>
+Os anos 60 popularizaram o Rock. Nos anos 70 surgiram o Hard Rock e o Heavy Metal. Os anos 80 expandiram o Thrash Metal, Glam Metal e Rock Alternativo. Já nos anos 90 apareceram o Grunge, Nu Metal e Metal Alternativo.
+</p>
+
+</section>
+
+<section>
+
+<h2>Os Instrumentos</h2>
+
+<p>
+A guitarra elétrica, o baixo e a bateria formam a base do Rock e do Metal. Muitos grupos também utilizam teclados, orquestras e instrumentos folclóricos para enriquecer suas composições.
+</p>
+
+</section>
+
+<section>
+
+<h2>Os Principais Subgêneros do Rock</h2>
+
+<p>
+Entre eles destacam-se o Rock Clássico, Hard Rock, Punk Rock, Rock Progressivo, Rock Alternativo, Indie Rock, Garage Rock e Rock Psicodélico.
+</p>
+
+</section>
+
+<section>
+
+<h2>Os Principais Subgêneros do Metal</h2>
+
+<p>
+O Heavy Metal deu origem a diversos estilos, como Thrash Metal, Death Metal, Black Metal, Power Metal, Doom Metal, Progressive Metal e Symphonic Metal.
+</p>
+
+</section>
+
+<section>
+
+<h2>Festivais Históricos</h2>
+
+<p>
+Os festivais aproximam fãs e artistas, fortalecendo a comunidade do Rock e do Metal e ajudando a divulgar novas bandas pelo mundo.
+</p>
+
+</section>
+
+<section>
+
+<h2>O Legado Continua</h2>
+
+<p>
+Mesmo após décadas de existência, o Rock e o Metal continuam evoluindo. Novos artistas mantêm viva a tradição e conquistam novas gerações de ouvintes.
+</p>
+
+</section>
+
+<section>
+
+<h2>Compromisso do Mosh e Melodia</h2>
+
+<p>
+Este blog continuará trazendo pesquisas, histórias, curiosidades, recomendações de bandas, análises de álbuns e notícias para construir uma verdadeira biblioteca sobre o universo do Rock e do Metal.
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<p><strong>Por: Victor Hugo Paiva Lamas</strong></p>
+
+</footer>
+
+</body>
+</html>
